@@ -1,8 +1,10 @@
-if('serviceWorker' in navigator){
+if ('serviceWorker' in navigator) {
     console.log("Andando service worker");
-    navigator.serviceWorker.register("./sw.js")
-    .then(res=>console.log('serviceWorker cargado correctamente', res))
-    .catch(err=>console.log('serviceWorker no se ha podido registrar',err));
-}else{
+    
+    // Corrige la ruta del Service Worker
+    navigator.serviceWorker.register("/sw.js")
+        .then(res => console.log('Service Worker cargado correctamente', res))
+        .catch(err => console.log('Error al registrar el Service Worker', err));
+} else {
     console.log("Aun no lo puedes usar");
 }

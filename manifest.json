@@ -1,14 +1,14 @@
 {
-    "name":"PRIMERA PWA",
+    "name": "PRIMERA PWA",
     "short_name": "PWA",
-    "description":"Su primera practica",
-    "backgraund_color": "#000000",
-    "theme_color":"#EB1616",
-    "orientation":"portrait",
+    "description": "Su primera practica",
+    "background_color": "#000000",
+    "theme_color": "#EB1616",
+    "orientation": "portrait",
     "display": "standalone",
-    "start_url":"./index.html?utm_source=web_app_manifest",
-    "scope":"./",
-    "lang":"es-MX",
+    "start_url": "./index.html?utm_source=web_app_manifest",
+    "scope": "./",
+    "lang": "es-MX",
     "icons":[
         {
             "src":"./img/icono-1024.png",
