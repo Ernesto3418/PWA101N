@@ -1,95 +1,83 @@
 {
-    "name": "PRIMERA PWA",
+    "name":"PRIMERA PWA",
     "short_name": "PWA",
-    "description": "Su primera practica",
-    "background_color": "#000000",
-    "theme_color": "#EB1616",
-    "orientation": "portrait",
+    "description":"Su primera practica",
+    "backgraund_color": "#000000",
+    "theme_color":"#EB1616",
+    "orientation":"portrait",
     "display": "standalone",
-    "start_url": "./index.html?utm_source=web_app_manifest",
-    "scope": "./",
-    "lang": "es-MX",
+    "start_url":"./index.html?utm_source=web_app_manifest",
+    "scope":"./",
+    "lang":"es-MX",
     "icons":[
         {
-            "src":"./img/icono-1024.png",
+            "src":".\/img\/icono-1024.png",
             "sizes":"1024x1024",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.75"
         },
         {
-            "src":"./img/icono-512.png",
+            "src":".\/img\/icono-512.png",
             "sizes":"512x512",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "2.5"
         },
         {
-            "src":"./img/icono-384.png",
+            "src":".\/img\/icono-384.png",
             "sizes":"384x384",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "2.25"
         },
         {
-            "src":"./img/icono-256.png",
+            "src":".\/img\/icono-256.png",
             "sizes":"256x256",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "2.0"
         },
         {
-            "src":"./img/icono-192.png",
+            "src":".\/img\/icono-192.png",
             "sizes":"192x192",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.75"
         }
         ,
         {
-            "src":"./img/icono-144.png",
+            "src":".\/img\/icono-144.png",
             "sizes":"144x144",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.75"
         }
         ,
         {
-            "src":"./img/icono-128.png",
+            "src":".\/img\/icono-128.png",
             "sizes":"128x128",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.5"
         },
         {
-            "src":"./img/icono-96.png",
+            "src":".\/img\/icono-96.png",
             "sizes":"96x96",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.25"
         },
         {
-            "src":"./img/icono-64.png",
+            "src":".\/img\/icono-64.png",
             "sizes":"64x64",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "1.0"
         }
         ,
         {
-            "src":"./img/icono-32.png",
+            "src":".\/img\/icono-32.png",
             "sizes":"32x32",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "0.75"
         },
         {
-            "src":"./img/icono-16.png",
+            "src":".\/img\/icono-16.png",
             "sizes":"16x16",
-            "type":"img/png"
-        }
-        ,
-        {
-            "src":"./img/Tamaño original/icono.png",
-            "sizes":"2000x1125",
-            "type":"img/png"
-        },
-        {
-            "src":"./img/user.jpg",
-            "sizes":"40x40",
-            "type":"img/png"
-        }
-        ,
-        {
-            "src":"./img/testimonial-1.jpg",
-            "sizes":"100x100",
-            "type":"img/png"
-        }
-        ,
-        {
-            "src":"./img/testimonial-2.jpg",
-            "sizes":"100x100",
-            "type":"img/png"
+            "type":"img\/png",
+            "density": "0.5"
         }
         
     ]

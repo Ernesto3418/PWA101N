@@ -1,6 +1,6 @@
-const CACHE_NAME='v1_cache_bch_pwa';
+const CACHE_NAME = 'v1_Prisicla_bch_pwa'
 
-var urlsToCache=[
+var urlIsToCache =[
     './',
     'css/bootstrap.min.css ',
     'css/style.css',
@@ -137,54 +137,50 @@ var urlsToCache=[
     'scss/bootstrap/scss/vendor/_rfs.scss',
 ];
 
-// Evento de instalación del Service Worker
-self.addEventListener('install', event => {
-    event.waitUntil(
+//Instala el service worker 
+self.addEventListener('install', e=> {
+    e.waitUntil(
         caches.open(CACHE_NAME)
-            .then(cache => {
-                // Agrega todas las URL al caché
-                return cache.addAll(urlsToCache);
-            })
+        .then(cache => {
+            return cache.addAll(urlIsToCache)
             .then(() => {
-                // Finaliza la instalación y activa el Service Worker
-                self.skipWaiting();
+                self.skipWaiting()
             })
-            .catch(error => {
-                console.error('Error durante la instalación:', error);
+
+            .catch(err => {
+                console.log('No se registro el cache', err);
             })
-    );
-});
+        })
+    )
+})
 
-// Evento de activación del Service Worker
-self.addEventListener('activate', event => {
-    const cacheWhitelist = [CACHE_NAME];
-
-    event.waitUntil(
+self.addEventListener('activate', e=>{
+    const cacheWhiteList = [CACHE_NAME]
+    e.waitUntil(
         caches.keys()
-            .then(cacheNames => {
-                return Promise.all(
-                    cacheNames.map(cacheName => {
-                        // Elimina cualquier caché que no esté en la lista blanca
-                        if (cacheWhitelist.indexOf(cacheName) === -1) {
-                            return caches.delete(cacheName);
-                        }
-                    })
-                );
-            })
-            .then(() => {
-                // Toma el control de todas las páginas abiertas
-                self.clients.claim();
-            })
+        .then(cacheNames => {
+            return Promise.all(
+                cacheNames.map(cacheName =>{
+                    if(cacheWhiteList.indexOf(cacheName) === -1){
+                        //Borrar elementos que no se necesitan
+                        return caches.delete(cacheName);
+                    }
+                })
+            );
+        })
+        .then(() => {self.clients.claim();})
     );
-});
+})
 
-// Evento de solicitud (fetch) del Service Worker
-self.addEventListener('fetch', event => {
-    event.respondWith(
-        caches.match(event.request)
-            .then(response => {
-                // Devuelve la respuesta del caché si está disponible, de lo contrario, realiza la solicitud
-                return response || fetch(event.request);
-            })
+self.addEventListener
+('fetch', e =>{
+    e.respondWith(
+        caches.match(e.request)
+        .then(res=>{
+            if(res){
+                return res;
+            }
+            return fetch(e.request);
+        })
     );
 });
