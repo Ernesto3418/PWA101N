@@ -37,6 +37,12 @@
         }
         ,
         {
+            "src":"./img/icono-144.png",
+            "sizes":"144x144",
+            "type":"img/png"
+        }
+        ,
+        {
             "src":"./img/icono-128.png",
             "sizes":"128x128",
             "type":"img/png"

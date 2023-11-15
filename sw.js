@@ -13,6 +13,7 @@ var urlsToCache=[
     'img/icono-64.png ',
     'img/icono-96.png ',
     'img/icono-128.png ',
+    'img/icono-144.png ',
     'img/icono-192.png ',
     'img/icono-256.png ',
     'img/icono-384.png ',
