@@ -148,7 +148,7 @@ self.addEventListener('install', e=> {
                 console.log('Cache registrado con éxito');
             })
             .catch(err => {
-                console.error('Error al registrar el cache:', err);
+                console.log('Error al registrar el cache:', err);
             })
         })
     )
