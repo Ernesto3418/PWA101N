@@ -1,4 +1,4 @@
-const CACHE_NAME = 'v1_Prisicla_bch_pwa'
+const CACHE_NAME = 'v1_ErnestoC_bch_pwa'
 
 var urlIsToCache =[
     './',
